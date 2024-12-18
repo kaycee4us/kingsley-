@@ -1,0 +1,950 @@
+
+!SESSION 2024-12-17 10:31:10.894 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_251
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -clearPersistedState
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clearPersistedState
+
+!ENTRY com.cerner.genesis.app.core.Application 2 0 2024-12-17 10:31:29.333
+!MESSAGE [JVM Start Up Time: 19,033 milliseconds]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:05.828
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:33:06.281
+!MESSAGE [my_experience_configuration =453 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:33:07.719
+!MESSAGE [Time to parse JSON for market = US | JSON_parsing_time = 1,422 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:33:07.735
+!MESSAGE [Total_time_to_initialize_AresApplication_Library = 1,907 milliseconds.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:07.735
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY com.cerner.iaware.library.content.loader.application.AppResolver 2 0 2024-12-17 10:33:08.641
+!MESSAGE [Opening a personalized application ([com.cerner.iaware.content.app.rca.Personalized]US:NONE:legacy) using the system default]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:08.641
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:33:08.641
+!MESSAGE [my_experience_configuration =0 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:33:08.641
+!MESSAGE [Time to parse JSON for market = US | JSON_parsing_time = 0 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:33:08.641
+!MESSAGE [Total_time_to_initialize_AresApplication_Library = 0 milliseconds.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:08.735
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY org.eclipse.ui 2 0 2024-12-17 10:33:11.188
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:33:11.188
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.cutCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:33:11.188
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.pasteCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+
+!ENTRY com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger 2 0 2024-12-17 10:33:13.907
+!MESSAGE [The enterprise client call 2030001 took 2,266ms to complete. The time to prepare the request was 0ms and the time to translate the reply was 0ms.]
+!STACK 0
+java.lang.Exception
+	at com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger.logExcessiveCallTime(DefaultEnterpriseClientCallLogger.java:42)
+	at com.cerner.revenuecycle.interceptors.enterprise.client.EnterpriseClientLoggerInterceptor$InterceptorFundamentalDelegate.end(EnterpriseClientLoggerInterceptor.java:211)
+	at com.cerner.system.enterprise.client.arctic.FundamentalCallImpl.end(FundamentalCallImpl.java:154)
+	at com.cerner.system.enterprise.client.arctic.SrvCall$1.run(SrvCall.java:160)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.system.enterprise.client.arctic.SrvCall.invoke(SrvCall.java:81)
+	at com.cerner.system.enterprise.client.arctic.FundamentalCallImpl.call(FundamentalCallImpl.java:116)
+	at com.cerner.ion.impl.delegate.GetEnabledFeatureTogglesDelegate.performCall(GetEnabledFeatureTogglesDelegate.java:47)
+	at com.cerner.ion.impl.MillenniumFeatureToggles.performGetEnabledFeatureTogglesCall(MillenniumFeatureToggles.java:110)
+	at com.cerner.ion.impl.MillenniumFeatureToggles.getEnabledFeatures(MillenniumFeatureToggles.java:60)
+	at com.cerner.iaware.featuretoggles.hyperion.internal.PriorityBasedFeatureLoader.getRemoteValues(PriorityBasedFeatureLoader.java:91)
+	at com.cerner.iaware.featuretoggles.hyperion.internal.PriorityBasedFeatureLoader.getEnabledFeatureToggles(PriorityBasedFeatureLoader.java:69)
+	at com.cerner.iaware.featuretoggles.hyperion.HyperionFeatureTogglesManager.loadEnabledFeatureFlags(HyperionFeatureTogglesManager.java:38)
+	at com.cerner.iaware.featuretoggles.hyperion.HyperionFeatureTogglesManager.<clinit>(HyperionFeatureTogglesManager.java:18)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.cerner.common.servicelocator.internal.ReflectionServiceProviderInstantiator$ReflectionServiceProviderParameteredBuilder$1.instantiate(ReflectionServiceProviderInstantiator.java:82)
+	at com.cerner.common.servicelocator.internal.AbstractServiceProviderInstantiator$AbstractServiceProviderParameteredBuilder.construct(AbstractServiceProviderInstantiator.java:141)
+	at com.cerner.common.servicelocator.internal.AbstractServiceProviderInstantiator.construct(AbstractServiceProviderInstantiator.java:46)
+	at com.cerner.common.servicelocator.internal.DefaultServiceProviderLocator$ServiceProvidersBuilderImpl.construct(DefaultServiceProviderLocator.java:92)
+	at com.cerner.iaware.featuretoggles.FeatureTogglesManager.newInstance(FeatureTogglesManager.java:26)
+	at com.cerner.genesis.gadget.registry.mystique.GadgetRegistryLoader.getProviderGadgets(GadgetRegistryLoader.java:94)
+	at com.cerner.genesis.gadget.registry.mystique.GadgetRegistryLoader.processAdditions(GadgetRegistryLoader.java:72)
+	at com.cerner.genesis.platform.rcp.hook.E4LifecycleHooks$ProcessAdditionWork.call(E4LifecycleHooks.java:309)
+	at com.cerner.genesis.platform.rcp.hook.E4LifecycleHooks$ProcessAdditionWork.call(E4LifecycleHooks.java:287)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.cerner.iaware.featuretoggles.hyperion.HyperionFeatureTogglesManager 2 0 2024-12-17 10:33:13.953
+!MESSAGE [Enabled_Features=[urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security, urn:cerner:feature-toggles:rate-limiting, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-ml-schedule, urn:cerner:revenue-cycle:scheduling:fix-alva-errors-for-incomplete-data, urn:cerner:revenue-cycle:scheduling-services:eliminate-cycling-alva-for-scheduling-security, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-phase-two, urn:cerner:revenue-cycle:cpa:rebill_specific_lines_on_professional_claim, urn:cerner:revenue-cycle:cpa:be-tool-dunning-level-tracking, urn:cerner:revenue-cycle:contract-and-remit-drg-enhancement, urn:cerner:revenue-cycle:scheduling:orion-add-appointment-plus-2018.08]]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:13.985
+!MESSAGE [System Property com.cerner.orion.connection.pool.size and environment variable CERNER_ORION_CONNECTION_POOL are both unset. Default value "100" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:13.985
+!MESSAGE [System Property com.cerner.orion.route.connections and environment variable CERNER_ORION_ROUTE_CONNECTIONS are both unset. Default value "20" will be used.]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:14.297
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:14.438
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:14.469
+!MESSAGE [System Property com.cerner.soarian.encounter.balances.serverurl and environment variable CERNER_IAW_ORION_ENCNTRBAL_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:14.469
+!MESSAGE [System Property com.cerner.soarian.encounter.insurances.serverurl and environment variable CERNER_IAW_ORION_ENCNTRINS_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:14.485
+!MESSAGE [System Property com.cerner.soarian.guarantor.balances.serverurl and environment variable CERNER_IAW_ORION_GUARANTORBAL_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:14.485
+!MESSAGE [System Property com.cerner.soarian.patient.insurances.serverurl and environment variable CERNER_IAW_ORION_PTNTINS_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.revenuecycle.featuretoggles.app.ml.FeatureToggleManagerImpl 2 0 2024-12-17 10:33:14.641
+!MESSAGE [Enabled_Features=[urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security, urn:cerner:feature-toggles:rate-limiting, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-ml-schedule, urn:cerner:revenue-cycle:scheduling:fix-alva-errors-for-incomplete-data, urn:cerner:revenue-cycle:scheduling-services:eliminate-cycling-alva-for-scheduling-security, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-phase-two, urn:cerner:revenue-cycle:cpa:rebill_specific_lines_on_professional_claim, urn:cerner:revenue-cycle:cpa:be-tool-dunning-level-tracking, urn:cerner:revenue-cycle:contract-and-remit-drg-enhancement, urn:cerner:revenue-cycle:scheduling:orion-add-appointment-plus-2018.08]]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:14.766
+!MESSAGE [System Property com.cerner.soarianfinancials.serverurl and environment variable CERNER_IAW_ORION_SOARIANFINANCIAL_URL are both unset. Default value "?gsm=true&tenantId=B617&targetAppUrl=%3Fsessionless%3Dfalse%26isEmbedded%3Dtrue" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:33:14.766
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY org.eclipse.ui 2 0 2024-12-17 10:33:15.875
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:33:15.875
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.cutCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:33:15.875
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.pasteCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:17.613
+!MESSAGE [configuration_document_service_time = 31 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:17.629
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:17.645
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:17.973
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:17.988
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.genesis.app.core.Application 2 0 2024-12-17 10:33:19.707
+!MESSAGE [Application Started At: [1734449489333], Application Running At: [1734449599707], Pre-authentication Startup Time: [281], Total Startup Time: [15425] milliseconds (excluding login wait time)]
+
+!ENTRY com.cerner.genesis.app.core.Application 2 0 2024-12-17 10:33:19.707
+!MESSAGE [Stopwatch Time: [15425] milliseconds (excluding the login wait time)]
+
+!ENTRY com.cerner.genesis.platform.rcp.hook.WorkbenchLifecycleHooks 2 0 2024-12-17 10:33:19.723
+!MESSAGE [The WorkbenchLifecycle hook [com.cerner.genesis.application.launcher.ApplicationLauncher] generated the following message at system time [1734449596157]: No PowerChartLaunchHandler instances were found, launching will be disabled]
+
+!ENTRY com.cerner.genesis.app.client.RCPApplicationEventHandler 2 0 2024-12-17 10:33:19.738
+!MESSAGE [Application ID [[com.cerner.iaware.content.app.rca.Personalized]US:NONE:legacy];  Application Name [United States Base Experience]; Application Definition Version [8.0]; Application Definition Revision [4b222f72-2cc7-46c0-b2ec-1fd393724717]; Application Version [4.8.50]]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:20.365
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:20.443
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:20.475
+!MESSAGE [configuration_document_service_time = 32 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:20.490
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:20.553
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:33:20.568
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:34:36.424
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:34:36.440
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:34:36.455
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.genesis.app.core 1 0 2024-12-17 10:34:46.160
+!MESSAGE com.cerner.common.servicelocator.internal.util.Logger log
+Invalid scope() setting to default.
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:34:46.550
+!MESSAGE [System Property com.cerner.scheduling.orion.serverurl and environment variable CERNER_SCHEDULING_ORION_URL are both unset. Default value "https://scheduling.cernerrevenuecycle.com" will be used.]
+!SESSION 2024-12-17 10:36:33.440 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_251
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -clearPersistedState
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clearPersistedState
+
+!ENTRY com.cerner.genesis.app.core.Application 2 0 2024-12-17 10:36:36.643
+!MESSAGE [JVM Start Up Time: 3,297 milliseconds]
+
+!ENTRY com.cerner.system.instrument.picasso.PicassoAutomaton 2 0 2024-12-17 10:38:12.550
+!MESSAGE [The Picasso subsystem is running. There are 3 active recorders [JMX, File, PRX] scheduled to run every 10 seconds.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:14.628
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:38:15.144
+!MESSAGE [my_experience_configuration =516 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:38:16.082
+!MESSAGE [Time to parse JSON for market = US | JSON_parsing_time = 938 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:38:16.097
+!MESSAGE [Total_time_to_initialize_AresApplication_Library = 1,469 milliseconds.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:16.097
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY com.cerner.iaware.library.content.loader.application.AppResolver 2 0 2024-12-17 10:38:16.503
+!MESSAGE [Opening a personalized application ([com.cerner.iaware.content.app.rca.Personalized]US:NONE:legacy) using the system default]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:16.503
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:38:16.503
+!MESSAGE [my_experience_configuration =0 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:38:16.503
+!MESSAGE [Time to parse JSON for market = US | JSON_parsing_time = 0 milliseconds.]
+
+!ENTRY com.cerner.revenuecycle.ares.application.library.AresApplicationLibrary 2 0 2024-12-17 10:38:16.519
+!MESSAGE [Total_time_to_initialize_AresApplication_Library = 0 milliseconds.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:16.566
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY org.eclipse.ui 2 0 2024-12-17 10:38:18.285
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:38:18.285
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.cutCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:38:18.285
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.pasteCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+
+!ENTRY com.cerner.iaware.featuretoggles.hyperion.HyperionFeatureTogglesManager 2 0 2024-12-17 10:38:19.550
+!MESSAGE [Enabled_Features=[urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security, urn:cerner:feature-toggles:rate-limiting, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-ml-schedule, urn:cerner:revenue-cycle:scheduling:fix-alva-errors-for-incomplete-data, urn:cerner:revenue-cycle:scheduling-services:eliminate-cycling-alva-for-scheduling-security, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-phase-two, urn:cerner:revenue-cycle:cpa:rebill_specific_lines_on_professional_claim, urn:cerner:revenue-cycle:cpa:be-tool-dunning-level-tracking, urn:cerner:revenue-cycle:contract-and-remit-drg-enhancement, urn:cerner:revenue-cycle:scheduling:orion-add-appointment-plus-2018.08]]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:19.582
+!MESSAGE [System Property com.cerner.orion.connection.pool.size and environment variable CERNER_ORION_CONNECTION_POOL are both unset. Default value "100" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:19.582
+!MESSAGE [System Property com.cerner.orion.route.connections and environment variable CERNER_ORION_ROUTE_CONNECTIONS are both unset. Default value "20" will be used.]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:19.769
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:19.879
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:19.925
+!MESSAGE [System Property com.cerner.soarian.encounter.balances.serverurl and environment variable CERNER_IAW_ORION_ENCNTRBAL_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:19.925
+!MESSAGE [System Property com.cerner.soarian.encounter.insurances.serverurl and environment variable CERNER_IAW_ORION_ENCNTRINS_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:19.925
+!MESSAGE [System Property com.cerner.soarian.guarantor.balances.serverurl and environment variable CERNER_IAW_ORION_GUARANTORBAL_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:19.925
+!MESSAGE [System Property com.cerner.soarian.patient.insurances.serverurl and environment variable CERNER_IAW_ORION_PTNTINS_URL are both unset. Default value "https://applications.cerner.com/soarianbalances" will be used.]
+
+!ENTRY com.cerner.revenuecycle.featuretoggles.app.ml.FeatureToggleManagerImpl 2 0 2024-12-17 10:38:20.394
+!MESSAGE [Enabled_Features=[urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security, urn:cerner:feature-toggles:rate-limiting, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-ml-schedule, urn:cerner:revenue-cycle:scheduling:fix-alva-errors-for-incomplete-data, urn:cerner:revenue-cycle:scheduling-services:eliminate-cycling-alva-for-scheduling-security, urn:cerner:revenue-cycle:scheduling-services:enable-logical-domain-security-phase-two, urn:cerner:revenue-cycle:cpa:rebill_specific_lines_on_professional_claim, urn:cerner:revenue-cycle:cpa:be-tool-dunning-level-tracking, urn:cerner:revenue-cycle:contract-and-remit-drg-enhancement, urn:cerner:revenue-cycle:scheduling:orion-add-appointment-plus-2018.08]]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:20.457
+!MESSAGE [System Property com.cerner.soarianfinancials.serverurl and environment variable CERNER_IAW_ORION_SOARIANFINANCIAL_URL are both unset. Default value "?gsm=true&tenantId=B617&targetAppUrl=%3Fsessionless%3Dfalse%26isEmbedded%3Dtrue" will be used.]
+
+!ENTRY com.cerner.genesis.common.system.SystemPropertyReader 2 0 2024-12-17 10:38:20.457
+!MESSAGE [System Property myexperience.market.override and environment variable MYEXPERIENCE_MARKET_OVERRIDE are both unset. Default value "null" will be used.]
+
+!ENTRY org.eclipse.ui 2 0 2024-12-17 10:38:21.254
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:38:21.254
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.cutCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-12-17 10:38:21.254
+!MESSAGE Commands should really have a category: plug-in='com.cerner.scheduling.ui.resource.view', id='com.cerner.scheduling.ui.resource.view.commands.pasteCommand', categoryId='com.cerner.scheduling.ui.resource.view.commands.category'
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:22.472
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:22.504
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:22.519
+!MESSAGE [configuration_document_service_time = 15 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:22.691
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:22.707
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.genesis.app.core.Application 2 0 2024-12-17 10:38:23.222
+!MESSAGE [Application Started At: [1734449796643], Application Running At: [1734449903222], Pre-authentication Startup Time: [188], Total Startup Time: [9782] milliseconds (excluding login wait time)]
+
+!ENTRY com.cerner.genesis.app.core.Application 2 0 2024-12-17 10:38:23.222
+!MESSAGE [Stopwatch Time: [9782] milliseconds (excluding the login wait time)]
+
+!ENTRY com.cerner.genesis.platform.rcp.hook.WorkbenchLifecycleHooks 2 0 2024-12-17 10:38:23.238
+!MESSAGE [The WorkbenchLifecycle hook [com.cerner.genesis.application.launcher.ApplicationLauncher] generated the following message at system time [1734449901472]: No PowerChartLaunchHandler instances were found, launching will be disabled]
+
+!ENTRY com.cerner.genesis.app.client.RCPApplicationEventHandler 2 0 2024-12-17 10:38:23.238
+!MESSAGE [Application ID [[com.cerner.iaware.content.app.rca.Personalized]US:NONE:legacy];  Application Name [United States Base Experience]; Application Definition Version [8.0]; Application Definition Revision [4b222f72-2cc7-46c0-b2ec-1fd393724717]; Application Version [4.8.50]]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:23.707
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:23.769
+!MESSAGE [configuration_document_service_time = 31 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:23.769
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:23.785
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:23.816
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:23.832
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:49.854
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:49.870
+!MESSAGE [configuration_document_service_time = 16 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:49.870
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.revenuecycle.common.configuration.internal.DefaultDocumentManager 2 0 2024-12-17 10:38:50.323
+!MESSAGE [configuration_document_service_time = 0 milliseconds]
+
+!ENTRY com.cerner.genesis.app.core 1 0 2024-12-17 10:38:51.323
+!MESSAGE com.cerner.common.servicelocator.internal.util.Logger log
+Invalid scope() setting to default.
+
+!ENTRY com.cerner.registration.configuration.onyx.internal.OnyxRegistrationAddressVerificationConfiguration 2 0 2024-12-17 10:38:52.104
+!MESSAGE [There is no registration address verification configuration document for the /revenuecycle/ares/US/NONE/legacy configuration profile or its ancestors. Defaults will be used.]
+
+!ENTRY com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger 2 0 2024-12-17 10:39:09.683
+!MESSAGE [The enterprise client call 680200 took 2,766ms to complete. The time to prepare the request was 0ms and the time to translate the reply was 0ms.]
+!STACK 0
+java.lang.Exception
+	at com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger.logExcessiveCallTime(DefaultEnterpriseClientCallLogger.java:42)
+	at com.cerner.revenuecycle.interceptors.enterprise.client.EnterpriseClientLoggerInterceptor$InterceptorServiceDelegate.end(EnterpriseClientLoggerInterceptor.java:292)
+	at com.cerner.system.enterprise.client.arctic.ServiceCallImpl.end(ServiceCallImpl.java:142)
+	at com.cerner.system.enterprise.client.arctic.SrvCall$1.run(SrvCall.java:160)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.system.enterprise.client.arctic.SrvCall.invoke(SrvCall.java:81)
+	at com.cerner.system.enterprise.client.arctic.ServiceCallImpl.call(ServiceCallImpl.java:99)
+	at com.cerner.scheduling.order.app.ml.internal.orders.query.manager.OrderQueryManagerImpl.queryFutureOrdersForPatient(OrderQueryManagerImpl.java:71)
+	at com.cerner.scheduling.ui.appointment.orders.util.DetectExistingOrdersUtility.retrieveExistingOrdersForPatient(DetectExistingOrdersUtility.java:81)
+	at com.cerner.scheduling.ui.scheduling.appointment.presenter.internal.AppointmentComponentPresenterImpl$4.notifyAppointmentTypeStateChanged(AppointmentComponentPresenterImpl.java:630)
+	at com.cerner.scheduling.ui.scheduling.appointment.detail.internal.AppointmentDetailsComponentImpl$1.notifyAppointmentTypeStateChanged(AppointmentDetailsComponentImpl.java:150)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.notifyAddAppointmentListeners(AddAppointmentComponent.java:3379)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.searchCompleted(AddAppointmentComponent.java:3589)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.access$1500(AddAppointmentComponent.java:317)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$9.performAppointmentTypeSearch(AddAppointmentComponent.java:4015)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$9.appointmentSynonymSearchEnterPressed(AddAppointmentComponent.java:4038)
+	at com.cerner.scheduling.ui.scheduling.internal.addappointment.AddAppointmentComposite.notifyAddAppointmentCompositeListeners(AddAppointmentComposite.java:1986)
+	at com.cerner.scheduling.ui.scheduling.internal.addappointment.AddAppointmentComposite.access$400(AddAppointmentComposite.java:131)
+	at com.cerner.scheduling.ui.scheduling.internal.addappointment.AddAppointmentComposite$8.keyPressed(AddAppointmentComposite.java:1130)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:171)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4213)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1471)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4862)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4740)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4923)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3628)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1158)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1047)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.cerner.genesis.app.client.RCPApplicationEventHandler.runEventQueue(RCPApplicationEventHandler.java:444)
+	at com.cerner.genesis.app.core.Application$2.run(Application.java:323)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.genesis.app.core.Application.start(Application.java:318)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+
+!ENTRY com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger 2 0 2024-12-17 10:57:11.387
+!MESSAGE [The enterprise client call 680200 took 2,453ms to complete. The time to prepare the request was 0ms and the time to translate the reply was 0ms.]
+!STACK 0
+java.lang.Exception
+	at com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger.logExcessiveCallTime(DefaultEnterpriseClientCallLogger.java:42)
+	at com.cerner.revenuecycle.interceptors.enterprise.client.EnterpriseClientLoggerInterceptor$InterceptorServiceDelegate.end(EnterpriseClientLoggerInterceptor.java:292)
+	at com.cerner.system.enterprise.client.arctic.ServiceCallImpl.end(ServiceCallImpl.java:142)
+	at com.cerner.system.enterprise.client.arctic.SrvCall$1.run(SrvCall.java:160)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.system.enterprise.client.arctic.SrvCall.invoke(SrvCall.java:81)
+	at com.cerner.system.enterprise.client.arctic.ServiceCallImpl.call(ServiceCallImpl.java:99)
+	at com.cerner.scheduling.order.app.ml.internal.orders.query.manager.OrderQueryManagerImpl.queryFutureOrdersForPatient(OrderQueryManagerImpl.java:71)
+	at com.cerner.scheduling.ui.appointment.orders.util.DetectExistingOrdersUtility.retrieveExistingOrdersForPatient(DetectExistingOrdersUtility.java:81)
+	at com.cerner.scheduling.ui.scheduling.appointment.presenter.internal.AppointmentComponentPresenterImpl$4.notifyAppointmentTypeStateChanged(AppointmentComponentPresenterImpl.java:630)
+	at com.cerner.scheduling.ui.scheduling.appointment.detail.internal.AppointmentDetailsComponentImpl$1.notifyAppointmentTypeStateChanged(AppointmentDetailsComponentImpl.java:150)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.notifyAddAppointmentListeners(AddAppointmentComponent.java:3379)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.searchCompleted(AddAppointmentComponent.java:3589)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.access$1500(AddAppointmentComponent.java:317)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$9.performAppointmentTypeSearch(AddAppointmentComponent.java:4015)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$9.appointmentSynonymSearchEnterPressed(AddAppointmentComponent.java:4038)
+	at com.cerner.scheduling.ui.scheduling.internal.addappointment.AddAppointmentComposite.notifyAddAppointmentCompositeListeners(AddAppointmentComposite.java:1986)
+	at com.cerner.scheduling.ui.scheduling.internal.addappointment.AddAppointmentComposite.access$400(AddAppointmentComposite.java:131)
+	at com.cerner.scheduling.ui.scheduling.internal.addappointment.AddAppointmentComposite$8.keyPressed(AddAppointmentComposite.java:1130)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:171)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4213)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1471)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4862)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4740)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4923)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3628)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1158)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1047)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.cerner.genesis.app.client.RCPApplicationEventHandler.runEventQueue(RCPApplicationEventHandler.java:444)
+	at com.cerner.genesis.app.core.Application$2.run(Application.java:323)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.genesis.app.core.Application.start(Application.java:318)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+
+!ENTRY com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger 2 0 2024-12-17 11:03:53.418
+!MESSAGE [The enterprise client call 115551 took 6,782ms to complete. The time to prepare the request was 16ms and the time to translate the reply was 0ms.]
+!STACK 0
+java.lang.Exception
+	at com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger.logExcessiveCallTime(DefaultEnterpriseClientCallLogger.java:42)
+	at com.cerner.revenuecycle.interceptors.enterprise.client.EnterpriseClientLoggerInterceptor$InterceptorFundamentalDelegate.end(EnterpriseClientLoggerInterceptor.java:211)
+	at com.cerner.system.enterprise.client.arctic.FundamentalCallImpl.end(FundamentalCallImpl.java:154)
+	at com.cerner.system.enterprise.client.arctic.SrvCall$1.run(SrvCall.java:160)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.system.enterprise.client.arctic.SrvCall.invoke(SrvCall.java:81)
+	at com.cerner.system.enterprise.client.arctic.FundamentalCallImpl.call(FundamentalCallImpl.java:116)
+	at com.cerner.demographics.app.ml.internal.service.AddEncounterServiceCall.invokeAddEncounterService(AddEncounterServiceCall.java:163)
+	at com.cerner.demographics.app.ml.internal.service.AddEncounterServiceCall.call(AddEncounterServiceCall.java:136)
+	at com.cerner.demographics.app.ml.internal.service.AddEncounterServiceCall.call(AddEncounterServiceCall.java:80)
+	at com.cerner.demographics.app.ml.internal.manager.encounter.MillenniumAddEncounterTransaction.save(MillenniumAddEncounterTransaction.java:134)
+	at com.cerner.demographics.app.ml.internal.manager.encounter.MillenniumAddEncounterTransaction.save(MillenniumAddEncounterTransaction.java:34)
+	at com.cerner.registration.app.internal.RegistrationManagerImpl.saveAddEncounterToExistingPatientTransaction(RegistrationManagerImpl.java:1970)
+	at com.cerner.registration.app.internal.RegistrationManagerImpl.saveAddEncounterToExistingPatientTransaction(RegistrationManagerImpl.java:335)
+	at com.cerner.scheduling.app.ml.internal.ScheduleManagerImpl.addEncounter(ScheduleManagerImpl.java:1064)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection$CreateEncounterRunner.addEncounter(EncounterSelection.java:579)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection$CreateEncounterRunner.run(EncounterSelection.java:560)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection.createNewEncounter(EncounterSelection.java:433)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection.addNewEncounter(EncounterSelection.java:341)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection.selectEncounterForAppointment(EncounterSelection.java:260)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection.selectEncounter(EncounterSelection.java:200)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection.selectEncounter(EncounterSelection.java:171)
+	at com.cerner.scheduling.ui.internal.common.encounter.selection.EncounterSelection.selectEncounter(EncounterSelection.java:155)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$11$1.run(AddAppointmentComponent.java:6574)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$11.confirmAppointment(AddAppointmentComponent.java:6826)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.performConfirmAction(AddAppointmentComponent.java:7904)
+	at com.cerner.scheduling.ui.scheduling.appointment.detail.internal.AppointmentDetailsComponentImpl.performConfirmAction(AppointmentDetailsComponentImpl.java:341)
+	at com.cerner.scheduling.ui.scheduling.appointment.presenter.internal.AppointmentComponentPresenterImpl.performConfirmAction(AppointmentComponentPresenterImpl.java:1251)
+	at com.cerner.scheduling.gadget.addappointment.AddAppointmentGadget$8.notifyButtonSelected(AddAppointmentGadget.java:576)
+	at com.cerner.scheduling.ui.scheduling.appointment.button.ButtonCommand.execute(ButtonCommand.java:53)
+	at com.cerner.scheduling.ui.scheduling.appointment.presenter.button.internal.SWTAppointmentPresenterButtonComposite$1.handleEvent(SWTAppointmentPresenterButtonComposite.java:174)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4213)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4030)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1158)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1047)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.cerner.genesis.app.client.RCPApplicationEventHandler.runEventQueue(RCPApplicationEventHandler.java:444)
+	at com.cerner.genesis.app.core.Application$2.run(Application.java:323)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.genesis.app.core.Application.start(Application.java:318)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+
+!ENTRY com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger 2 0 2024-12-17 11:03:56.371
+!MESSAGE [The enterprise client call 655214 took 2,907ms to complete. The time to prepare the request was 0ms and the time to translate the reply was 0ms.]
+!STACK 0
+java.lang.Exception
+	at com.cerner.revenuecycle.interceptors.enterprise.client.internal.DefaultEnterpriseClientCallLogger.logExcessiveCallTime(DefaultEnterpriseClientCallLogger.java:42)
+	at com.cerner.revenuecycle.interceptors.enterprise.client.EnterpriseClientLoggerInterceptor$InterceptorFundamentalDelegate.end(EnterpriseClientLoggerInterceptor.java:211)
+	at com.cerner.system.enterprise.client.arctic.FundamentalCallImpl.end(FundamentalCallImpl.java:154)
+	at com.cerner.system.enterprise.client.arctic.SrvCall$1.run(SrvCall.java:160)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.system.enterprise.client.arctic.SrvCall.invoke(SrvCall.java:81)
+	at com.cerner.system.enterprise.client.arctic.FundamentalCallImpl.call(FundamentalCallImpl.java:116)
+	at com.cerner.service.scheduling.rca.ECRCAAppointments.post(ECRCAAppointments.java:356)
+	at com.cerner.client.scheduling.rca.appointment.RCAAppointmentRepositoryImpl.postAppointment(RCAAppointmentRepositoryImpl.java:424)
+	at com.cerner.scheduling.app.ml.internal.AppointmentManagerImpl.performWriteAppointment(AppointmentManagerImpl.java:1582)
+	at com.cerner.scheduling.app.ml.internal.AppointmentManagerImpl.doWriteAppointment(AppointmentManagerImpl.java:1403)
+	at com.cerner.scheduling.app.ml.internal.AppointmentManagerImpl.writeAppointment(AppointmentManagerImpl.java:1286)
+	at com.cerner.scheduling.app.internal.appointment.AppointmentImpl.confirm(AppointmentImpl.java:1793)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$11$1.run(AddAppointmentComponent.java:6633)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent$11.confirmAppointment(AddAppointmentComponent.java:6826)
+	at com.cerner.scheduling.ui.scheduling.AddAppointmentComponent.performConfirmAction(AddAppointmentComponent.java:7904)
+	at com.cerner.scheduling.ui.scheduling.appointment.detail.internal.AppointmentDetailsComponentImpl.performConfirmAction(AppointmentDetailsComponentImpl.java:341)
+	at com.cerner.scheduling.ui.scheduling.appointment.presenter.internal.AppointmentComponentPresenterImpl.performConfirmAction(AppointmentComponentPresenterImpl.java:1251)
+	at com.cerner.scheduling.gadget.addappointment.AddAppointmentGadget$8.notifyButtonSelected(AddAppointmentGadget.java:576)
+	at com.cerner.scheduling.ui.scheduling.appointment.button.ButtonCommand.execute(ButtonCommand.java:53)
+	at com.cerner.scheduling.ui.scheduling.appointment.presenter.button.internal.SWTAppointmentPresenterButtonComposite$1.handleEvent(SWTAppointmentPresenterButtonComposite.java:174)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4213)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4030)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1158)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1047)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.cerner.genesis.app.client.RCPApplicationEventHandler.runEventQueue(RCPApplicationEventHandler.java:444)
+	at com.cerner.genesis.app.core.Application$2.run(Application.java:323)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.genesis.app.core.Application.start(Application.java:318)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+
+!ENTRY com.cerner.registration.configuration.onyx.internal.OnyxRegistrationConversationConfiguration 2 0 2024-12-17 11:25:17.060
+!MESSAGE [There is no registration conversation configuration document for the /revenuecycle/ares/US/NONE/legacy configuration profile or its ancestors. Defaults will be used.]
+
+!ENTRY com.cerner.demographics.app.ml.internal.person.event.detail.PatientEventDetailsReader 2 0 2024-12-17 11:25:18.998
+!MESSAGE [The event attribute type meaning [HEALTH_INFO_ACC_OFFER_CD] is not supported so the event detail will not be returned.]
+
+!ENTRY com.cerner.registration.configuration.onyx.internal.OnyxRegistrationAuthorizationsConfiguration 2 0 2024-12-17 11:25:20.561
+!MESSAGE [There is no authorizations configuration document for the /revenuecycle/ares configuration profile or its ancestors. Defaults will be used.]
+
+!ENTRY com.cerner.registration.ui.internal.ModifyEncounterConversationImpl 2 0 2024-12-17 11:25:24.170
+!MESSAGE [The Medical Necessity conversation property type is null.]
+
+!ENTRY com.cerner.demographics.app.ml.internal.person.event.detail.PatientEventDetailsReader 2 0 2024-12-17 11:25:24.811
+!MESSAGE [The event attribute type meaning [HEALTH_INFO_ACC_OFFER_CD] is not supported so the event detail will not be returned.]
+
+!ENTRY com.cerner.demographics.app.ml.internal.person.event.detail.PatientEventDetailsReader 2 0 2024-12-17 11:25:24.951
+!MESSAGE [The event attribute type meaning [HEALTH_INFO_ACC_OFFER_CD] is not supported so the event detail will not be returned.]
+
+!ENTRY com.cerner.genesis.app.client 4 0 2024-12-17 11:26:32.203
+!MESSAGE An unexpected exception occurred.
+!STACK 0
+com.cerner.system.enterprise.client.arctic.GeneralDomainCallException: Call failure: name = pft_rca_get_image_types, domain = b617.cnwy_sc.cernerasp.com, user = tprice1, GeneralScriptException
+	at com.cerner.system.enterprise.client.arctic.SrvCall$1.run(SrvCall.java:158)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.system.enterprise.client.arctic.SrvCall.invoke(SrvCall.java:81)
+	at com.cerner.system.enterprise.client.arctic.ScriptCallImpl.call(ScriptCallImpl.java:149)
+	at com.cerner.financials.app.image.ml.internal.DocumentImageManagerImpl.getImageTypes(DocumentImageManagerImpl.java:309)
+	at com.cerner.financials.ui.image.DocumentImageController.retrieveImageTypes(DocumentImageController.java:994)
+	at com.cerner.financials.ui.image.DocumentImageController.getFilters(DocumentImageController.java:790)
+	at com.cerner.financials.ui.image.DocumentImageController.getDefaultEntityListViewLayout(DocumentImageController.java:700)
+	at com.cerner.financials.ui.entityview.BaseCustomEntityViewController.getEntityListViewLayout(BaseCustomEntityViewController.java:45)
+	at com.cerner.financials.ui.image.DocumentImageController.<init>(DocumentImageController.java:326)
+	at com.cerner.scheduling.ui.patient.tracking.internal.dialog.PatientTrackingImagesDialog.createDocumentImageController(PatientTrackingImagesDialog.java:213)
+	at com.cerner.scheduling.ui.patient.tracking.internal.dialog.PatientTrackingImagesDialog.createContent(PatientTrackingImagesDialog.java:189)
+	at com.cerner.ui.components.messagearea.MessageAreaDialog.createDialogArea(MessageAreaDialog.java:108)
+	at com.cerner.demographics.ui.demographicsbar.DemographicsBarDialog.createDialogArea(DemographicsBarDialog.java:198)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:767)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at com.cerner.ui.components.dialog.MeasuredDialog.open(MeasuredDialog.java:56)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.evaluateAutoLaunchActions(PerformSchedulingActionFunction.java:3407)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.access$1900(PerformSchedulingActionFunction.java:280)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction$17.modifyEncounterCompleted(PerformSchedulingActionFunction.java:3333)
+	at com.cerner.scheduling.ui.patient.tracking.internal.dialog.ModifyPatientModifyVisitActionDialog$2.modifyEncounterCompleted(ModifyPatientModifyVisitActionDialog.java:106)
+	at com.cerner.registration.ui.internal.action.ModifyPatientModifyEncounterActionImpl$3.modifyEncounterConversationCompleted(ModifyPatientModifyEncounterActionImpl.java:178)
+	at com.cerner.registration.ui.internal.action.ModifyPatientModifyEncounterActionWizardController.notifyEncounterCompletedEvent(ModifyPatientModifyEncounterActionWizardController.java:176)
+	at com.cerner.registration.ui.internal.action.AbstractRegistrationActionWizardController$EncounterRegistrationConversationSaveListener.saveCompleted(AbstractRegistrationActionWizardController.java:405)
+	at com.cerner.registration.ui.internal.ConversationImpl.notifyConversationSaveCompleted(ConversationImpl.java:560)
+	at com.cerner.registration.ui.internal.ModifyEncounterConversationImpl$SaveEncounterTask.lambda$run$0(ModifyEncounterConversationImpl.java:2007)
+	at com.cerner.revenuecycle.common.swt.DisplaySynchronizer.lambda$syncExec$0(DisplaySynchronizer.java:55)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:139)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4005)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3633)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at com.cerner.ui.components.dialog.MeasuredDialog.open(MeasuredDialog.java:56)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.displayModifyPatientThenModifyVisitDialog(PerformSchedulingActionFunction.java:3359)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.handleAutomaticConversationLaunch(PerformSchedulingActionFunction.java:1962)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.evaluateAutomaticConversationLaunch(PerformSchedulingActionFunction.java:1559)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.autoLaunchAndSchedule(PerformSchedulingActionFunction.java:1470)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.autoLaunchAndPerformSchedulingActionJob(PerformSchedulingActionFunction.java:1104)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.launchAuthorizationWarningDialogAndPerformSchedulingAction(PerformSchedulingActionFunction.java:1031)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.performSchedulingActions(PerformSchedulingActionFunction.java:997)
+	at com.cerner.scheduling.ui.patient.tracking.internal.function.PerformSchedulingActionFunction.function(PerformSchedulingActionFunction.java:987)
+	at org.eclipse.swt.browser.WebSite.Invoke(WebSite.java:809)
+	at org.eclipse.swt.browser.WebSite$7.method6(WebSite.java:182)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3628)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1158)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1047)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.cerner.genesis.app.client.RCPApplicationEventHandler.runEventQueue(RCPApplicationEventHandler.java:444)
+	at com.cerner.genesis.app.core.Application$2.run(Application.java:323)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.cerner.genesis.app.core.Application.start(Application.java:318)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: com.cerner.system.enterprise.client.arctic.GeneralScriptException: Script failure: name = pft_rca_get_image_types, domain = b617.cnwy_sc.cernerasp.com
+	at com.cerner.system.enterprise.client.arctic.ScriptCallImpl.translate(ScriptCallImpl.java:109)
+	at com.cerner.system.enterprise.client.arctic.SrvCall$1.run(SrvCall.java:145)
+	... 77 more
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.218
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.211Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.218
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.216Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.218
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.221Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.234
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.224Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.234
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.230Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.234
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.233Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.234
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.237Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.250
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.241Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.250
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.244Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.250
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.248Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.250
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.252Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.265
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.255Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
+
+!ENTRY com.cerner.revenuecycle.canadarm.CanadarmBrowserFunctionImpl 4 0 2024-12-17 11:26:32.281
+!MESSAGE [An error has occurred while executing java script][User: tprice1, Domain: b617.cnwy_sc.cernerasp.com, Version: 4.8.50]
+!STACK 0
+com.cerner.revenuecycle.canadarm.exceptions.CanadarmException: characterSet=utf-8
+columnNumber=14
+language=en-US
+lineNumber=1128
+logDate=2024-12-17T16:26:32.273Z
+msg=[FATAL]: Object doesn't support property or method 'hide'
+pageURL=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/patient-tracking.html
+stack=TypeError: Object doesn't support property or method 'hide'
+   at Anonymous function (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js:1128:14)
+   at jQuery.event.dispatch (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4640:21)
+   at elemData.handle (file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/lib/jquery-1.11.1.min.js:4308:17)
+scriptURL=?
+url=file:///C:/Program%20Files/Cerner/RevenueCycle/plugins/com.cerner.scheduling.ui.patient.tracking_9.2.3/dist/js/legacy/patient-tracking.js
+<-----------------------------End of message----------------------------->
